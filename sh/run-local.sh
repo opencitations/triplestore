@@ -3,7 +3,7 @@ myv=`curl -s http://localhost:3000/blazegraph/sparql?query=SELECT%20%3Fs%20%7B%3
 
 if [ -z "$myv" ] || [[ $myv != *"results"* ]];
 then
-    stop.sh
+    ./stop.sh
     java -server -Xmx1g -Dbigdata.propertyFile=occ.properties -Djetty.port=3000 -Djetty.host=127.0.0.1 -jar blazegraph.jar &
     exit 0
 fi

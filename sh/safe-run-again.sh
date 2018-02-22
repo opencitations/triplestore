@@ -27,7 +27,7 @@ done
 
 # Stop and run again the triplestore
 cd /srv/triplestore/corpus/sh
-stop.sh
+./stop.sh
 sleep 2
 ./check-and-run.sh
 

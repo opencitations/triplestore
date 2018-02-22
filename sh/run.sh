@@ -3,7 +3,7 @@ myv=`timeout 30s curl -s http://localhost:3000/blazegraph/sparql?query=SELECT%20
 
 if [ -z "$myv" ] || [[ $myv != *"results"* ]];
 then
-    stop.sh
+    ./stop.sh
     sleep 2
     nohup java -server -Xmx256G -Dbigdata.propertyFile=occ.properties -Djetty.port=3000 -Djetty.host=127.0.0.1 -jar blazegraph.jar &
     exit 0
