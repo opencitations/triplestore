@@ -17,7 +17,7 @@
 CUR_DIR="${pwd}"
 
 # Gently stop all the processes
-/home/essepuntato/OC/script/gently-stop.sh
+/srv/dev/corpus/script/sh/gently-stop.sh
 
 # Wait until the statistics, backup, BEE and SPACIN finish
 while ps -ef | grep "[p]ython statistics.py" > /dev/null || ps -ef | grep "[b]ackup.sh" > /dev/null || ps -ef | grep "[p]ython bee.py" > /dev/null || ps -ef | grep "[p]ython spacin.py" > /dev/null; do
