@@ -7,7 +7,7 @@ then
     ./stop.sh
     sleep 2
     cd ..
-    nohup java -server -Xmx64G -Dbigdata.propertyFile=occ.properties -Djetty.port=3000 -Djetty.host=127.0.0.1 -jar blazegraph.jar &
+    nohup java -server -Xmx16G -Dbigdata.propertyFile=occ.properties -Djetty.port=3000 -Djetty.host=127.0.0.1 -jar blazegraph.jar &
     cd $CUR_DIR
     exit 0
 fi
